@@ -1,0 +1,311 @@
+/*Begin your code here*/
+/*Requirement 1*/
+body{
+  margin: 0;
+  padding: 0;
+  font-size: 16pt; 
+  font-family: 'Raleway', sans-serif;
+  background-image: url("../images/concrete_seamless.png");
+}
+
+/*Requirement 2*/
+header{
+  background: #fff;
+  border-bottom: 3px solid #50C7C7;
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  /*how do you make it on top of each other?*/
+  /*Your  code here again.*/
+
+}
+
+/*Requirement 3*/
+.nav_links{
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  /*how do you make it on top of each other?*/
+  /*Your code here again.*/
+}
+
+
+/*Requirement 4*/
+.price{
+    min-height: 500px;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    /*Your code here*/
+    /*You must use flex.
+    /*Don't forget to vertically and horizontally 
+    align the element*/
+}
+
+/*Requirement 5*/
+.package {
+  margin: 12px;
+  background: #fff;
+  border-radius: 7px;
+  padding: 0 0 50px 0;
+
+  display: flex;
+  display: -webkit-box;
+  display: -ms-flexbox;
+
+  flex-basis: 400px;
+  -ms-flex-preferred-size: 400px;
+  /*Your code here.*/
+
+  flex-direction: column;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+}
+
+/*Requirement 6*/
+div.package header{
+  background: #288080;
+  border: 2px solid #45ADAD;
+  padding: 20px 0;
+  border-radius: 7px 7px 0 0;
+}
+
+
+/*Requirement 7*/
+.gallery{
+  min-height: 600px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+
+  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+
+  justify-content: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+
+  flex-direction: row;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: row;
+  /*Your code here again.*/
+}
+
+/*Requirement 8*/
+div.gallery img{
+  border: 10px #50C7C7 solid;
+  margin: 10px;
+  width: 300px;
+}
+
+/*Requirement 9*/
+#logo{
+  animation-name: logo_grow;
+  -webkit-animation-name: logo_grow;
+
+  animation-duration: 15s;
+  -webkit-animation-duration: 15s;
+
+  animation-iteration-count: 1;
+  -webkit-animation-iteration-count: 1;
+
+   /*Your code here.*/
+ 
+}
+
+/*Keyframes for animation*/
+@-webkit-keyframes logo_grow{
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 420px; 
+    opacity: 1;
+  }
+  /*Your code here.*/
+
+}
+
+@keyframes logo_grow{
+  from {
+    width: 25px;
+    opacity: 0;
+  }
+  to {
+    width: 420px; 
+    opacity: 1;
+  }
+
+  /*Your code here.*/
+
+} 
+
+@media screen and (min-width: 850px){
+
+  /*Requirement 10*/
+  header{
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+
+    justify-content: space-between;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    /*Your code here again.*/  
+  }
+
+  /*Requirement 10*/
+  .nav_links{
+    flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+        /*Your code here again.*/  
+  }
+
+  /*Requirement 11*/
+  .package {
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    flex-basis: 230px;
+    -ms-flex-preferred-size: 230px;
+    /*Your code here again.*/
+  } 
+}
+
+/*Requirement 12*/
+@media screen and (prefers-reduced-motion: reduce) {
+  #logo{
+    animation-name: logo_grow;
+    -webkit-animation-name: logo_grow;
+
+    animation-duration: 0; 
+    -webkit-animation-duration: 0;
+
+    transition-duration: 0;
+    -webkit-transition-duration: 0; 
+    -o-transition-duration: 0; 
+
+    animation-iteration-count: 0;
+    -webkit-animation-iteration-count: 0;
+  }
+}
+
+@media print {
+
+  body{
+  background-image: none;
+  }
+
+  .nav_links{
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    flex-direction: row;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+
+    padding-right: 1000px;
+  }
+
+  header{
+    width: 100%;
+    display: flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+
+    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+
+    justify-content: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+
+    align-items: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    /*Your code here again.*/  
+  }
+
+  /*Requirement 11*/
+  .package {
+    border: 2px solid #45adad;
+    flex-basis: 200px;
+    -ms-flex-preferred-size: 200px;
+    /*Your code here again.*/
+  } 
+
+  #gallery, .gallery{
+    display: none;
+  }
+
+  div.gallery img{
+    display: none;
+  }
+
+  .price{
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    -webkit-box-align: end;
+    -ms-flex-align: end;
+    align-items: flex-end;
+  }
+
+}
+
